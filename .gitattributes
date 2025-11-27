@@ -1,0 +1,2 @@
+*.jpg filter=lfs diff=lfs merge=lfs -text
+csv/pol_pd_2020_1km_ASCII_XYZ.csv filter=lfs diff=lfs merge=lfs -text

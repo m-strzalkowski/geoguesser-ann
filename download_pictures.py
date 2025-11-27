@@ -49,7 +49,7 @@ def download_streetview_images(
     output_dir  – output directory path
     size        – output image size, e.g. "640x640"
     heading     – 0-360
-    pitch       – -90 to 90
+    pitch       – -90 to 90https://hub.worldpop.org/geodata/summary?id=43238
     fov         – 1 to 120
     api_key
     source - limits searches to selected source, default/outdoor
