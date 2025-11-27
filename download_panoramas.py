@@ -297,11 +297,13 @@ def get_next_ordinal(dataset_dir):
     return max(ordinals) + 1
 
 # %%
+import time
 def download_n_panoramas(n, dataset_dir, size_px=640, api_key=api_key):
     """Download n panoramas, continuing from the highest existing ordinal"""
     start_ordinal = get_next_ordinal(dataset_dir)
     print(f"Starting from ordinal {start_ordinal}")
-    
+    #basic throttling
+    time.sleep(0.2+np.random.rand()/10)
     points = sample_population_points(csv_path, n)
     
     for i, point in enumerate(points):
@@ -438,7 +440,7 @@ def generate_augmented_views(
 # %%
 # Configuration
 DATASET_DIR = "panorama_dataset"
-N_PANORAMAS = 5
+N_PANORAMAS = 100
 SIZE_PX = 640
 
 # Step 1: Download panoramas
